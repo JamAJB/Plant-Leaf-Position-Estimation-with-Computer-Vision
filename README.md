@@ -12,12 +12,12 @@ This repository contains code described in the article 'Plant Leaf Position Esti
 6. Move the robot arm to any predicted positions
 7. Reset
 
-*Object_detection_image_dir_to_txt.py* is a python program which is called by *Robot_Control.py*, and runs a directory of images through the neural network "ssd_mobilenet_v2_quantized_coco". Any detections are saved to a text file. The neural network was trained following this Tutorial: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10 . The trained network was then transferred to the Raspberry Pi using this tutorial: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi . *Object_detection_image_dir_to_txt.py* is an adaptation of the code *Object_detection_picamera.py* written by https://github.com/EdjeElectronics. Adaptations were made so the code classifies all images in a specified directory, and all outputs are saved to a text file.
+*Object_detection_image_dir_to_txt.py* is a python program which is called by *Robot_Control.py*, and runs a directory of images through the neural network "ssd_mobilenet_v2_quantized_coco". Any detections are saved to a text file. The neural network was trained following this Tutorial: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10. The trained network was then transferred to the Raspberry Pi using this tutorial: https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi . *Object_detection_image_dir_to_txt.py* is an adaptation of the code *Object_detection_picamera.py* written by https://github.com/EdjeElectronics. Adaptations were made so the code classifies all images in a specified directory, and all outputs are saved to a text file.
 
 *Motor_Control* is an Arduino code which controls the motion of three stepper motors. Position commands are received over serial, which the Arduino interprets and executes. Every motion a motor makes is set to have safe acceleration and deceleration. The Arduino returns commands over serial to indicate when a command has been received, completed, or failed. a failed command would be caused by a limit switch being pressed.
 
 *labelmap.pbtxt* is the label map of the neural network. The network is only trained to recognise Cowpea (Vigna unguiculata) leaves.
 
-*inference_graph_ssd_mobilenet* contains the saved inference graph which was used to detect leaves.
+*inference_graph_ssd_mobilenet* contains the saved inference graph trained with the Tensorflow API which was used to detect leaves.
 
 *Test_Data.csv* includes the actual and predicted positions of 30 different detections the robot made in millimetres. Conclusions made from this have been outlined in the article.
