@@ -20,4 +20,4 @@ This repository contains code described in the article 'Plant Leaf Position Esti
 
 *inference_graph_ssd_mobilenet* contains the saved inference graph trained with the Tensorflow API which was used to detect leaves.
 
-*Test_Data.csv* includes the actual and predicted positions of 30 different detections the robot made in millimetres. Conclusions made from this have been outlined in the article.
+*Data.csv* includes the actual and predicted positions of 30 different detections the robot made in millimetres. Conclusions made from this have been outlined in the article.
