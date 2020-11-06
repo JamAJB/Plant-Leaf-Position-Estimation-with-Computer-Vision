@@ -1,5 +1,5 @@
 # Plant-Leaf-Position-Estimation-with-Computer-Vision
-This repository contains code described in the article 'Plant Leaf Position Estimation with Computer Vision', pending review.
+This repository contains code described in the article 'Plant Leaf Position Estimation with Computer Vision', published in Sensors. The full paper can be accessed here: https://doi.org/10.3390/s20205933
  
 
 *Robot_Control.py*, or 'Central Control Code', is a python program designed to be run on a Raspberry Pi connected to a USB camera and Arduino. The code sends positional commands to the Arduino, which controls the motors of a linear three-axis robot. The USB Camera is connected to the robots arm. the code follows the processes below.
